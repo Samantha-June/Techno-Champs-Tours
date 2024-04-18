@@ -325,3 +325,22 @@ var dates = $("#date, #datetwo").datepicker({
  
 });
 }
+// Couples Itenerary
+
+ // Get references to the divs and buttons
+ const defaultPage = document.getElementById('defaultPage');
+ const otherPage = document.getElementById('otherPage');
+ const toggleButton = document.getElementById('toggleButton');
+ const toggleBackButton = document.getElementById('toggleBackButton');
+
+ // Add event listener to the toggle button
+ toggleButton.addEventListener('click', function() {
+     defaultPage.classList.remove('visible');
+     otherPage.classList.add('visible');
+ });
+
+ // Add event listener to the toggle back button
+ toggleBackButton.addEventListener('click', function() {
+     otherPage.classList.remove('visible');
+     defaultPage.classList.add('visible');
+ });

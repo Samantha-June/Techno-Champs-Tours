@@ -263,6 +263,72 @@ q {
 .author {
   color: cornflowerblue;
 }
+.toggleButton{
+
+  margin-left: 50%;
+}
+ 
+/*Places to visit*/
+ 
+.places {
+  background-image: url(/images/leo.avif);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: 300px 10px 300px 10px;
+  border-radius: 5px;
+  height: 300px;
+}
+
+.places1 {
+  background-image: url(/images/capetown/couple.avif);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: 300px 10px 300px 10px;
+  border-radius: 5px;
+  height: 300px;
+}
+.places2 {
+  background-image: url(/images/Mpumalanga/mpumalangaCouple.avif);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: 300px 10px 300px 10px;
+  border-radius: 5px;
+  height: 300px;
+}
+ 
+.locations{
+display: inline-block;
+margin-left: 115px;
+}
+.locations img{
+ border-radius: 50px;
+}
+ 
+.locations:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
+}
+ 
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.8); /* Black see-through */
+  color: #f1f1f1;
+  width: 80%;
+  transition: .3s ease;
+  opacity:0;
+  color: #cfa658;
+  font-size: 20px;
+  padding: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 55px;
+  text-align: center;
+}
  
 /*Places to visit*/
  
@@ -305,8 +371,9 @@ margin-left: 115px;
 }
  
 /* When you mouse over the container, fade in the overlay title */
-.locations:hover .overlay {
+.locations:hover .overlay1 {
   opacity: 1;
+  border-radius: 0 0 30% 30%;
 }
  
 .locations{
@@ -316,6 +383,7 @@ margin-left: 115px;
   padding: 50px;
   transition: transform .2s;
   margin: auto;
+  border-radius: 25%;
 }
 .places h1 {
   color: #af8028;
@@ -324,11 +392,33 @@ margin-left: 115px;
   font-size: 120px;
  
 }
+.places1 h1 {
+  color: #ffffff;
+  text-align: center;
+  font-family: cursive;
+  font-size: 120px;
+ 
+}
+.places2 h1 {
+  color: #ffffff;
+  text-align: center;
+  font-family: cursive;
+  font-size: 120px;
+ 
+}
+
 .destination p {
   color: #af8028;
   text-align: center;
   font-family: cursive;
   font-size: 55px;
+}
+
+.destination1 p {
+  color: #af8028;
+  text-align: center;
+  font-family: cursive;
+  font-size: 36px;
 }
 .places-info {
   height: 150px;
@@ -347,20 +437,50 @@ margin-left: 115px;
   font-size: 30px;
   text-align: center;
 }
+.places-info1 {
+  height: 150px;
+  padding: 10px;
+  margin-top: 150px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  background-color: #cfa658;
+  text-align: center;
+  margin-top: 80px;
+}
+ 
+.places-info cite {
+  height: 220px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+
 .map{
   float: right;
   border-radius: 50px;
   margin-right: 45px;
   margin-top: 60px;
 }
+
+.map1{
+  width: 60%;
+  
+  border-radius: 10px;
+  margin-left: 20%;
+  margin-top: 60px;
+  height: 400px;
+}
 .places-locations {
   margin-top: 110px;
+  border-radius: 25%;
 }
 .places-locations h1 {
   color: #af8028;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   font-size: 50px;
+  
 }
 .places-south-africa h1{
   margin-top: 20px;
@@ -374,6 +494,25 @@ margin-left: 115px;
   font-family: cursive;
   font-size: 25px;
   margin-left: 10px;
+  border-radius: 25%;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+}
+
+.places-south-africa1 h1{
+  margin-top: 10px;
+  text-align: center;
+}
+.places-south-africa1 p {
+  color: #af8028;
+  text-align: center;
+  
+  text-align: center;
+  font-family: cursive;
+  font-size: 25px;
+  margin-left: 60px;
+  margin-right: 60px;
+ 
   flex-direction: row-reverse;
   margin-top: 20px;
 }
@@ -851,7 +990,13 @@ button[type="button"]:hover {
   width: 25%;
   margin-top: 6px;
 }
- 
+ /*Toggle Show and Hide */
+.page {
+  display: none;
+}
+.visible {
+  display: block;
+}
  
 /*end of bookings*/
 @media (max-width: 900px) {
@@ -1118,6 +1263,8 @@ p {
 }
  
 /* navbar ul and services ul*/
+ 
+/* navbar ul and services ul*/
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -1197,4 +1344,66 @@ li.dropdown {
  
 #myBtn:hover {
   background-color: #555;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #cfa658;
+  border-bottom: 16px solid #cfa658;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+/* Media queries for Couple's Itenerary */
+@media(max-width: 430px){
+  .places1 h1{
+    font-size: 60px;
+    margin-bottom: 3rem;
+  }
+  .places-info cite{
+    font-size: large;
+  }
+  .page img{
+    width: 280px;
+    height: 280px;
+    align-content: start;
+    display: table-column-group;
+  }
 }
