@@ -1,4 +1,20 @@
 
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownContent = dropdown.querySelector('.dropdown');
+  const content = document.querySelector('.content');
+
+  dropdown.addEventListener('mouseenter', function() {
+    const dropdownHeight = dropdownContent.offsetHeight;
+    content.style.marginTop = `${dropdownHeight}px`;
+  });
+
+  dropdown.addEventListener('mouseleave', function() {
+    content.style.marginTop = '0';
+  });
+});
+
+
 // Array of images
 var images = ["/images/capeTownSandy.jpg", "/images/back2.jpg", "/images/mpumalangaTourist.jpg", "/images/capeTownTourists.jpg", "/images/stell.jpg", "/images/knp.webp"];
 var captions = ["Table Mountain", "Kruger National Park", "Gods Window", "Table Mountain", "Stellenbosch Wine Farm", "Kruger National Park"];
