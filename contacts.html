@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a04d21dfd1.js" crossorigin="anonymous"></script>
+    <link  rel="stylesheet" href="style.css">
+    <title>Contacts</title>
+  </head>
+  <body>
+    <!--Navigation bar that scrolls down to sections on page -->
+     
+    <nav role="navigation" aria-label="main menu" class="d-flex justify-content-between" >
+      <!--Logo-->
+      <a href="index.html">
+        <img src="/images/Techno.png" alt="Techno Champs Tours Logo" class="logo">
+      </a>
+      <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+      <div class="container" id="myLinks">
+      <ul>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">OUR SERVICES</a>
+          <div class="dropdown-content">
+            <a href="services.html">PACKAGES</a>
+            <a href="services.html">GALLERY</a>
+          </div>
+        </li>
+        <li><a href="places.html">PLACES TO VISIT</a></li>
+        <li><a href="booking.html">BOOKING</a></li>
+        <li><a href="contacts.html">CONTACT US</a></li>  
+      </ul>
+      </div>
+    </nav>
+ 
+     <!--End of Nav bar-->
+   
+     <!--Contact us-->
+ 
+     <div class="parallax">
+      <div class="container-contact">
+          <h1>Contact Us</h1>
+          <p>
+            Thank you for visiting our website.<br> Contact us below if you'd like to communicate with us.
+          </p>
+      </div>
+      <div class="content-contact">
+        <div class="col-1">
+          <div class="address-line">
+            <div class="contact-info">
+              <div class="contact-info-title">Address</div>
+              <div>97 Durham Ave,</div>
+              <div> Salt River, Cape Town, </div>
+              <div>7925</div>
+            </div>
+          </div>
+          <div class="address-line">
+            <div class="contact-info">
+              <div class="contact-info-title">Phone</div>
+              <div> (021) 003 7509</div>
+            </div>
+          </div>
+          <div class="address-line">
+            <div class="contact-info">
+              <div class="contact-info-title">Email</div>
+              <a href="mailto:technochampstours@gmail.com">
+                <img src="/images/email (1).png" alt="Email Logo" width="50px" height="70px">
+                <p>
+                  technochampstours@gmail.com</a>
+                </p><br>
+              <div class="contact-info-title">Twitter</div>
+              <a href=https://www.twitter.com/@technochamps_tours>
+                <img src="/images/twitter logo_icon.png" alt="Twitter Logo" width="50px" height="60px">
+                <p>
+                  technochampstours</a> <!-- href ending here closes link -->
+                </p><br>
+              <div class="contact-info-title">Instagram</div>
+              <a href="https://www.Instagram.com/@technochamps_tours">
+               <img src="/images/instagram logo_icon.png" alt="Instagram Logo" width="50px" height="60px">
+               <p>
+                technochamps_tours</a> <!-- href ending here closes link -->
+               </p><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="form-container">
+            <form id="myForm" onsubmit="return validateForm()">
+              <h2>Send Message</h2>              
+              <div class="form-row">
+                <label for="name">Full Name</label>
+                <div>
+                  <input type="text" id="name" name="name" class="form-field" oninput="validateName()" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <div>
+                  <input type="email" id="email" name="email" class="form-field" oninput="validateEmail()" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <label>Type your message...</label>
+                <div>
+                  <textarea class="form-field" rows="4" required></textarea>
+                </div>
+              </div>
+              <button type="submit" value="submit" class="send-btn">Submit</button>
+            </form>
+          </div>
+          <div class="iframe">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3015618795307!2d18.458079011377873!3d-33.9333711730903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5d08518ba1b9%3A0x1398e85e424f762!2s97%20Durham%20Ave%2C%20Salt%20River%2C%20Cape%20Town%2C%207925!5e0!3m2!1sen!2sza!4v1711461171799!5m2!1sen!2sza"
+                  width="600"
+                  height="260"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        </div>
+      </div>
+      </div>
+ 
+    </div>
+    <button onclick="topFunction()" id="myBtn10" title="Go to top">Top</button>  
+   
+    <div class="footer">
+      <footer><small> <p>&copy; 2024 Techno Champs Tours</p></small></footer>
+      </div>
+ 
+  </body>
+  <script src="script.js"></script>
+</html>
