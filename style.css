@@ -270,6 +270,13 @@ q {
  
 /*Places to visit*/
  
+.places-locations img {
+  margin-top: 5px;
+  width: 400px;
+  height: 400px;
+
+}
+
 .places {
   background-image: url(images/maxresdefault.jpg);
   background-size: 100% 100%;
@@ -284,11 +291,23 @@ q {
 display: inline-block;
 margin-left: 115px;
 }
- 
+
+.locations figcaption{
+  color: #573a05;
+}
+
+.locations figcaption:hover{
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+
+
 .locations:hover {
   -ms-transform: scale(1.2); /* IE 9 */
   -webkit-transform: scale(1.10); /* Safari 3-8 */
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
  
 .overlay {
@@ -310,7 +329,8 @@ margin-left: 115px;
  
 /* When you mouse over the container, fade in the overlay title */
 .locations:hover .overlay {
-  opacity: 1;
+  opacity: 10;
+  margin-bottom: 119px;
 }
  
 .locations{
@@ -327,11 +347,11 @@ margin-left: 115px;
 .places h1 {
   color: #ebe9e6;
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 80px;
-  margin-top: 150px;
- 
+  font-family: cursive;
+  font-size: 50px;
+  margin-top: 180px;
 }
+
 .places1 h1 {
   color: #ffffff;
   text-align: center;
